@@ -1,0 +1,36 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Novo evento 2",
+    "details":null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/5f8a5166-62bc-409b-81a0-e45f5c3a5e84/attendees
+Content-Type: application/json
+
+{
+    "name": "Guilherme Ferreira",
+    "email": "guilherme2@rocketseat.com.br"
+}
+
+###
+
+GET  http://localhost:3333/events/5f8a5166-62bc-409b-81a0-e45f5c3a5e84
+
+###
+
+GET  http://localhost:3333/attendees/4/badge
+
+###
+
+GET  http://localhost:3333/attendees/4/check-in
+
+###
+
+GET  http://localhost:3333/events/5f8a5166-62bc-409b-81a0-e45f5c3a5e84/attendees?query=Guilherme
+
+
